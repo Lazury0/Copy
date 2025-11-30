@@ -55,8 +55,8 @@ ul { list-style: none; }
 /* --- HERO SLIDER (Image unique) --- */
 .hero-slider {
   position: relative;
-  height: 30vh; /* Hauteur importante pour l'impact visuel */
-  min-height: 500px;
+  height:30vh; /* Hauteur importante pour l'impact visuel */
+  min-height: 200px;
   overflow: hidden;
   background: linear-gradient(to right, #e2e8f0, #fcfaf8 20%, #f8fafc 80%, #e2e8f0);;
 }
@@ -78,7 +78,7 @@ ul { list-style: none; }
   text-align: center; color: white;
   max-width: 800px;
 }
-.hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.1; }
+.hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.1; }
 .hero-content .lead { font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; }
 
 /* --- SERVICES GRID --- */
@@ -226,4 +226,22 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .brand-block { flex-direction: column; text-align: center; }
   .grid-2-cols { grid-template-columns: 1fr; }
+}
+/* --- Styles pour la vidéo YouTube --- */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 30.25%; /* Ratio 16/9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px; /* Arrondi légèrement plus prononcé */
+  background: #000; /* Fond noir en attendant le chargement */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
